@@ -1,25 +1,22 @@
 import './App.css';
+import Bienvenido from './components/Bienvenido';
+import Navbar from './components/Navbar';
+import Zapas from './components/Zapas';
 
-function App() {
+
+const App = () =>{
   return (
-    
-    <nav className="navbar navbar-expand-lg ">
-    <div className="container-fluid">
-      <a className="titulo navbar-brand">Zapas Haedo</a>
-      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse d-flex justify-content-center" id="navbarNavAltMarkup">
-        <div className="navbar-nav ">
-          <a className="subtitulo nav-link " aria-current="page">Vans</a>
-          <a className="subtitulo nav-link" aria-current="page" >Converse</a>
-          <a className="subtitulo nav-link" aria-current="page" >Adidas</a>
-         
-        </div>
-      </div>
-    </div>
-  </nav>
+    <>
+    <Navbar/>
+   <Bienvenido bienvenido="Bienvenido a nuestra pagina" />
+    {/*props*/}
+    <Zapas nombre="Vans" talles="38, 39, 40, 41" color="Rojo, negro, bordo" />
+    <Zapas nombre="Converse" talles=" 39, 40, 41" color="Blanco, rojo, marron, negro, celeste" />
+    <Zapas nombre="Adidas" talles=" 39, 40, 41, 42" color="Negro, blanco, gris" />
+    </>
   );
 }
+
+
 
 export default App;

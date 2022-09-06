@@ -11,3 +11,19 @@
   margin: 15px;
   color: whitesmoke;
 }
+
+
+.pagina{
+  margin-top: 15px;
+  text-align: center;
+}
+
+.marca{
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.carrito{
+  margin-right: 50px;
+  font-size: 50px;
+}
