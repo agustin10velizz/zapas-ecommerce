@@ -5,11 +5,13 @@
 .navbar{
   background-color: rgb(248, 37, 37);
   box-shadow: 1px 2px 5px 5px  #001d18f5; 
+  
 }
 
 .subtitulo{
   margin: 15px;
   color: whitesmoke;
+  justify-content: center;
 }
 
 
@@ -23,7 +25,33 @@
   margin-left: 25px;
 }
 
+
 .carrito{
-  margin-right: 50px;
+  color: white;
   font-size: 50px;
+  margin-right: 35px;
+}
+
+.img-logo{
+  margin-left: 15px;
+}
+
+
+.imagen-container{
+  display: flex;
+    align-content: flex-start;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+.imagen-zapas{
+display: flex;
+}
+
+.imagen-titulo{
+  display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: center;
+    margin-left: 25px;
 }
