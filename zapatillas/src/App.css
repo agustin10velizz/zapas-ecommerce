@@ -1,3 +1,7 @@
+body{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .titulo{
   color: white;
 }
@@ -39,19 +43,28 @@
 
 .imagen-container{
   display: flex;
-    align-content: flex-start;
-    justify-content: center;
-    margin-top: 45px;
+  justify-content: center;
+  gap: 2rem;
+  margin: 45px;
+  display: inline-block;
+  
 }
 
 .imagen-zapas{
 display: flex;
+border-radius: 15px;
+border: 10px black;
+
 }
 
 .imagen-titulo{
-  display: flex;
-    flex-direction: column;
-    align-content: stretch;
-    justify-content: center;
     margin-left: 25px;
+}
+
+.boton{
+  margin-top: 10px;
+}
+
+.zapas{
+  border-radius: 15px;
 }

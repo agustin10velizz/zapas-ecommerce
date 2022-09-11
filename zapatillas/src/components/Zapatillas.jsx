@@ -7,12 +7,12 @@ const Zapatillas =({Titulo, Colores, Talles, Precio, Imagen}) =>{
 
     return(
         <>
-<div className="imagen-container">
-<h2> {Titulo} </h2>
-
+    <div className="imagen-container">
+        <h2> {Titulo} </h2>
+     
      <div className="imagen-zapas">
     
-     <img src={Imagen} alt="" width="200" height="154" ></img>
+     <img src={Imagen} alt="" width="200" height="154" className="zapas" ></img>
         </div>
      <div className="imagen-titulo">
         <p> Colores :{Colores} </p>
@@ -27,4 +27,3 @@ const Zapatillas =({Titulo, Colores, Talles, Precio, Imagen}) =>{
 }
 
 export default Zapatillas;
-

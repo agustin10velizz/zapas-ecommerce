@@ -16,11 +16,11 @@ export const Comprar = ({initial, stock, onAdd}) =>{
         <>
         
         <div className="counter">
-            <button disabled={Carro <= 0 } onClick={restar}  >-</button>
+            <button disabled={Carro <= 0 } onClick={restar} className="btn btn-dark"  >-</button>
             <span> {Carro} </span>
-            <button disabled={Carro >= stock } onClick={sumar} >+</button>
+            <button disabled={Carro >= stock } onClick={sumar} className="btn btn-dark" >+</button>
             <div>
-            <button disabled={stock <=0} onClick={() => onAdd(Carro)} >Agregar carrito</button>
+            <button disabled={stock <=0} onClick={() => onAdd(Carro)} className=" boton btn btn-danger">Comprar</button>
             </div>
 
         </div></>

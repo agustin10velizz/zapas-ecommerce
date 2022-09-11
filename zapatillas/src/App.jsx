@@ -7,9 +7,11 @@ import Zapass from './containers/Zapass';
 const App = () =>{
   return (
     <>
+    
     <Navbar/>
    <Bienvenido bienvenido="Bienvenido a nuestra pagina" />
     <Zapass/>
+ 
     </>
   );
 }
