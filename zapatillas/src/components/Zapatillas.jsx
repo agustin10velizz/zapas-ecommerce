@@ -1,8 +1,9 @@
 import Carro from "../components/Carro"
 
-const onAdd = (quantity) =>{
-  console.log(`compraste ${quantity} unidades `)
-}
+/*
+const onAdd = (cantidad) =>{
+  console.log(`compraste ${cantidad} unidades `)
+}*/
 const Zapatillas =({Titulo, Colores, Talles, Precio, Imagen}) =>{
 
     return(
@@ -18,7 +19,7 @@ const Zapatillas =({Titulo, Colores, Talles, Precio, Imagen}) =>{
         <p> Colores :{Colores} </p>
         <p> Talles :{Talles}  </p>
         <p> Precio: {Precio} </p>
-        <Carro initial={0} stock={10} onAdd={onAdd} /> 
+        <Carro initial={0} stock={10}  /> 
             </div>
         </div>
         </>
