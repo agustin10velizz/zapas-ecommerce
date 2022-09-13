@@ -11,7 +11,7 @@ const Zapass = () =>{
       
        customFetch(2000,dataFromDB) //esto hace que en 2 segundos carge los productos
         .then(resultado =>setData (resultado))
-        .catch(error => console.log(error))
+        .catch(err => console.log(err))
 
         setData(dataFromDB);
     }, []);
