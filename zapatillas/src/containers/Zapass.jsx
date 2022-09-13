@@ -13,14 +13,13 @@ const Zapass = () =>{
         .then(resultado =>setData (resultado))
         .catch(err => console.log(err))
 
-        setData(dataFromDB);
     }, []);
 
     return(
         <>
         {
             data.map(item =>(
-    <Zapatillas
+       <Zapatillas
         key={item.id}
         id={item.id}
         Titulo={item.Titulo}

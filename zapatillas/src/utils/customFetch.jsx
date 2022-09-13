@@ -1,6 +1,6 @@
 let is_ok = true
 
-let customFetch = (tiempo, array) => {
+let customFetch = (time, array) => {
     return new Promise ( (resolve, reject) => {
         setTimeout (() => {
             if (is_ok) {
@@ -8,7 +8,7 @@ let customFetch = (tiempo, array) => {
             } else{
                 reject ("Error de carga")
             }
-        }, tiempo)
+        }, time)
     })
 }
       
