@@ -20,7 +20,7 @@ export const Comprar = ({initial, stock, }) =>{
             <span> {Carro} </span>
             <button disabled={Carro >= stock } onClick={sumar} className="btn btn-dark" >+</button>
             <div>
-            <button disabled={stock <=0}  className=" boton btn btn-danger">Comprar</button>
+            <button disabled={stock <=0}  className=" boton btn btn-dark">Comprar</button>
             </div>
 
         </div></>
