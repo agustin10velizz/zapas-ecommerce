@@ -10,8 +10,7 @@ const App = () =>{
     
     <Navbar/>
    <Bienvenido bienvenido="Bienvenido a nuestra pagina" />
-    <Zapass/>
- 
+   <Zapass/>
     </>
   );
 }

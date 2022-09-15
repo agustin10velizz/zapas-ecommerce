@@ -1,6 +1,11 @@
+
 const Bienvenido = (props) =>{
+   
+
+   
+   
     return(
-        <h2  className="pagina"> {props.bienvenido} </h2>
+        <h2>  {props.Bienvenido} </h2>
     )
 }
 

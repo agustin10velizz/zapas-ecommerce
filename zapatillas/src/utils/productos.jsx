@@ -1,4 +1,4 @@
-const dataFromDB = [
+const Productos = [
     {
         id:"1",
         Titulo:"Vans",
@@ -49,4 +49,13 @@ const dataFromDB = [
     }
 ];
 
-export default dataFromDB
+const getList = () => {
+    return new Promise ( (resolve, reject) =>{
+        setTimeout ( () =>{
+            resolve (Productos)
+        }, 2000);
+    })
+}
+
+
+export default getList;

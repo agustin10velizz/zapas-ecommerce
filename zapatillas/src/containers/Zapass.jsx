@@ -1,24 +1,45 @@
 import { useEffect, useState } from "react";
-import Zapatillas from "../components/Zapatillas";
-import dataFromDB from "../utils/data";
-import customFetch from "../utils/customFetch"
+import getList from "../utils/productos";
+import ItemList from "../components/ItemList";
 
 const Zapass = () =>{
     const [data, setData] = useState([]);
-
-
+    const [loading , setLoading] = useState (false)
+   
+   /*
     useEffect(() => {
-      
-       customFetch(2000,dataFromDB) //esto hace que en 2 segundos carge los productos
-        .then(resultado =>setData (resultado))
+        customFetch (2000, Productos)
+        .then(result => setData(result))
         .catch(err => console.log(err))
 
-    }, []);
+    }, []);*/
+
+    
+
+    useEffect ( () =>{
+        setLoading (true);
+        getList()
+        .then( (response) => setData (response))
+        .catch ( (err) => console.error(err))
+        .finally (() => setLoading(false))
+    }, [])
+  
 
     return(
-        <>
-        {
-            data.map(item =>(
+    
+        <div className="listContainer">
+        {loading ? <h1> Cargando..</h1>  : <ItemList products={data}/>}
+        </div>
+      
+    );
+
+}
+
+export default Zapass;
+
+/*
+  {  
+ data.map(item =>(
        <Zapatillas
         key={item.id}
         id={item.id}
@@ -30,18 +51,7 @@ const Zapass = () =>{
         />
             ))
         }
-        
         </>
     );
 
-}
-
-
-
-
-
-
-
-
-
-export default Zapass;
+}*/
