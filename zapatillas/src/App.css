@@ -47,11 +47,12 @@ body{
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin: 45px;
+  margin: 2px;
   display: inline-block;
   background-color: rgb(236, 75, 75);
   border-radius: 15px;
   padding: 10px;
+  margin-top: 20px;
   
 }
 
@@ -70,8 +71,40 @@ border: 10px black;
 
 .boton{
   margin-top: 10px;
+  margin-left: 18px;
 }
 
 .zapas{
   border-radius: 15px;
+}
+
+
+
+.promo-container{
+  background-color: rgb(221, 152, 113);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 15px;
+  display: inline-block;
+  border-radius: 15px;
+  padding: 10px;
+  margin-left: 200px;
+
+}
+
+.comprar-edicion{
+  margin-left:150px;
+}
+.titulo-vans{
+  font-size: 25px;
+}
+
+.ver-mas{
+  margin-bottom: 10px;
+  margin-left: 25px;
+}
+
+.suma{
+  margin-left: 15px;
 }

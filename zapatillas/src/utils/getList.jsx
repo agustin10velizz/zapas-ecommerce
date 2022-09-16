@@ -1,6 +1,6 @@
 const Productos = [
     {
-        id:"1",
+        id: 1,
         Titulo:"Vans",
          Colores: "Negro",
           Talles:"39, 40, 41",
@@ -56,6 +56,7 @@ const getList = () => {
         }, 2000);
     })
 }
+
 
 
 export default getList;

@@ -1,16 +1,18 @@
 import './App.css';
-import Bienvenido from './components/Bienvenido';
 import Navbar from './components/Navbar';
 import Zapass from './containers/Zapass';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 
 const App = () =>{
   return (
     <>
-    
+    <div>
+
     <Navbar/>
-   <Bienvenido bienvenido="Bienvenido a nuestra pagina" />
    <Zapass/>
+   <ItemDetailContainer/>
+   </div>
     </>
   );
 }

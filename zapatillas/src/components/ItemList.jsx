@@ -1,5 +1,6 @@
-import Zapatillas from "./Zapatillas";
+//map
 
+import Zapatillas from "./Zapatillas";
 
 const ItemList = ( {products}) => {
     console.log (products)

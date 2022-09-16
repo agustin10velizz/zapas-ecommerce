@@ -16,9 +16,9 @@ export const Comprar = ({initial, stock, }) =>{
         <>
         
         <div className="counter">
-            <button disabled={Carro <= 0 } onClick={restar} className="btn btn-dark"  >-</button>
+            <button disabled={Carro <= 0 } onClick={restar} className="suma btn btn-dark"  >-</button>
             <span> {Carro} </span>
-            <button disabled={Carro >= stock } onClick={sumar} className="btn btn-dark" >+</button>
+            <button disabled={Carro >= stock } onClick={sumar} className="suma btn btn-dark" >+</button>
             <div>
             <button disabled={stock <=0}  className=" boton btn btn-dark">Comprar</button>
             </div>
