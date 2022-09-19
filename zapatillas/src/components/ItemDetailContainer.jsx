@@ -1,8 +1,8 @@
 import ItemDetail from '../components/ItemDetail'
 import React, {useEffect, useState} from 'react';
 
-const film = {
-    id:1,
+const Especial = {
+    id:"1",
     Titulo:" Vans SK8-Hi Family (Edicion Especial)",
       Talle:" 41",
        Precio:"$25000",
@@ -12,18 +12,26 @@ const film = {
 
 const ItemDetailContainer = () => {
     const [dato , setDato] = useState ({});
+    const [loading , setLoading] = useState (false)
 
+    
     useEffect(() =>{
+        setLoading (true);
         const getData = new Promise (resolve =>{
             setTimeout(() => {
-                resolve(film);
+                resolve(Especial);
             }, 2000)
         });
-        getData.then(res=> setDato(res));
+        getData
+        .then( (response) => setDato (response))
+        .catch ( (err) => console.error(err))
+        .finally (() => setLoading(false))
     }, [])
 
     return(
-        <ItemDetail dato={dato} />
+        <div >
+        {loading ? <h2>Cargando..</h2> : <ItemDetail dato={dato} /> }
+        </div>
     );
 }
 

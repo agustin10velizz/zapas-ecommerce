@@ -21,7 +21,7 @@ const Zapatillas =({product}) =>{
         <p> Color :{product.Colores} </p>
         <p> Talles :{product.Talles}  </p>
         <p> Precio: {product.Precio} </p>
-        <button className="ver-mas btn btn-light">Ver mas</button>
+       
         <Carro initial={0} stock={10}  /> 
             </div>
         </div>

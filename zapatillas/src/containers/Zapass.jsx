@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import ItemList from "../components/ItemList";
-import getList from "../utils/getList";
+import customFetch from "../utils/customFetch"
+import Productos from "../utils/getList";
 
 const Zapass = () =>{
     const [data, setData] = useState([]);
     const [loading , setLoading] = useState (false)
-   
+   const {id} = useParams();
    /*
     useEffect(() => {
         customFetch (2000, Productos)
@@ -13,23 +15,30 @@ const Zapass = () =>{
         .catch(err => console.log(err))
 
     }, []);*/
- 
-
    
-
+   
+    
     useEffect ( () =>{
-        setLoading (true);
-        getList()
-        .then( (response) => setData (response))
-        .catch ( (err) => console.error(err))
-        .finally (() => setLoading(false))
-    }, [])
+        if (id){
+            setLoading (true);
+            customFetch(2000, Productos.filter (products => products.categoryId == id ))
+            .then (result => setData (result))
+            .catch (err => console.log (err))
+            .finally (() => setLoading(false))
+        } else { 
+            setLoading (true);
+            customFetch(2000, Productos)
+            .then (result => setData (result))
+            .catch (err => console.log (err))
+            .finally (() => setLoading(false))
+        }
+    }, [id])
   
 
     return(
     
         <div className="listContainer">
-        {loading ? <h2> Cargando..</h2>  : <ItemList products={data}/>}
+        {loading ? <h2> Cargando..</h2>  : <ItemList products={data}/>   }
         </div>
       
     );
@@ -55,4 +64,11 @@ export default Zapass;
         </>
     );
 
-}*/
+}
+
+
+  setLoading (true);
+        getList()
+        .then( (response) => setData (response))
+        .catch ( (err) => console.error(err))
+        .finally (() => setLoading(false))   */

@@ -7,7 +7,7 @@ const ItemDetail = ({dato}) => {
      
      <div className="promo-zapas">
     
-     <img src={dato.Imagen} alt="" width="450" height="354" className="promos" ></img>
+     <img src={dato.Imagen} alt="" width="400" height="254" className="promos" ></img>
         </div>
      <div className="imagen-titulo">
         <h2 className="titulo-vans"> {dato.Titulo} </h2>
