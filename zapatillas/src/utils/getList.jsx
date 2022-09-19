@@ -76,7 +76,7 @@ const Productos = [
                     categoryId: 2, 
         },
         {
-            id:"6",
+            id:"9",
              Titulo:"Adidas",
                Color: "Verde",
                 Talles:"39, 40, 41",
