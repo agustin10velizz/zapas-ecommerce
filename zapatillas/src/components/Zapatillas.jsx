@@ -1,10 +1,16 @@
-import Carro from "../components/Carro"
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import Carro from "./Carro"
 
-/*
-const onAdd = (cantidad) =>{
-  console.log(`compraste ${cantidad} unidades `)
-}*/
+
 const Zapatillas =({product}) =>{
+
+    const[Cart, setCart] = useState (false);
+    
+    const onAdd = (cantidad) =>{
+        setCart (true);   
+    }
+      
 
     return(
         <>
@@ -22,7 +28,12 @@ const Zapatillas =({product}) =>{
         <p> Talles :{product.Talles}  </p>
         <p> Precio: {product.Precio} </p>
        
-        <Carro initial={0} stock={10}  /> 
+        {
+            Cart
+                ? <Link to='/cart' > <button className="btn btn-dark" > Ver detalle de la compra</button>  </Link>
+                : <Carro initial={0} stock={10} onAdd={onAdd}/>
+        }
+       
             </div>
         </div>
         </>

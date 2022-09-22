@@ -2,21 +2,13 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../components/ItemList";
 import customFetch from "../utils/customFetch"
-import Productos from "../utils/getList";
+import Productos from "../utils/Productos";
 
 const Zapass = () =>{
     const [data, setData] = useState([]);
     const [loading , setLoading] = useState (false)
    const {id} = useParams();
-   /*
-    useEffect(() => {
-        customFetch (2000, Productos)
-        .then(result => setData(result))
-        .catch(err => console.log(err))
 
-    }, []);*/
-   
-   
     
     useEffect ( () =>{
         if (id){

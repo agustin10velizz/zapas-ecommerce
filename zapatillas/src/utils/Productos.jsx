@@ -1,6 +1,6 @@
 const Productos = [
     {   
-        id: "1",
+        id: 1,
         Titulo:"Vans",
          Color: "Negro",
           Talles:"39, 40, 41",
@@ -9,7 +9,7 @@ const Productos = [
              categoryId: 1,
     },
     {
-        id:"2",
+        id:2,
         Titulo:"Converse",
         Color: "Blanco",
          Talles:"39, 40, 41",
@@ -18,7 +18,7 @@ const Productos = [
            categoryId: 2,
         },
     {
-        id:"3",
+        id:3,
         Titulo:"Adidas",
         Color: "Blanco",
          Talles:"39, 40, 41",
@@ -28,7 +28,7 @@ const Productos = [
 
         },
     {
-        id:"4",
+        id:4,
         Titulo:"Vans",
          Color: "Rojo",
           Talles:"39, 40, 41",
@@ -38,7 +38,7 @@ const Productos = [
 
         },
     {
-        id:"5",
+        id:5,
         Titulo:"Converse",
         Color: "Negro",
          Talles:"39, 40, 41",
@@ -48,7 +48,7 @@ const Productos = [
 
         },
     {
-        id:"6",
+        id:6,
         Titulo:"Adidas",
         Color: "Negro",
          Talles:"39, 40, 41",
@@ -58,7 +58,7 @@ const Productos = [
 
         },
         {
-            id: "7",
+            id: 7,
             Titulo:"Vans",
              Color: "Azul",
               Talles:"39, 40, 41",
@@ -67,7 +67,7 @@ const Productos = [
                  categoryId: 1, 
         },
         {
-            id:"8",
+            id:8,
              Titulo:"Converse",
               Color: "Marrones",
                Talles:"39, 40, 41",
@@ -76,7 +76,7 @@ const Productos = [
                     categoryId: 2, 
         },
         {
-            id:"9",
+            id:9,
              Titulo:"Adidas",
                Color: "Verde",
                 Talles:"39, 40, 41",
