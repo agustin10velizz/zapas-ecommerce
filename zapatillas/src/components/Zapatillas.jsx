@@ -1,14 +1,19 @@
+import { useContext } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Carro from "./Carro"
+import { CartContext } from "./CartContext";
 
 
 const Zapatillas =({product}) =>{
 
     const[Cart, setCart] = useState (false);
-    
+    const {addItem} = useContext (CartContext);
+
+
     const onAdd = (cantidad) =>{
-        setCart (true);   
+        setCart (true); 
+       addItem (product,cantidad)
     }
       
 
@@ -19,15 +24,13 @@ const Zapatillas =({product}) =>{
      
      <div className="imagen-zapas">
     
-     <img src={product.Imagen} alt="" width="200" height="154" className="zapas" ></img>
+     <img src={product.imagen} alt="" width="200" height="154" className="zapas" ></img>
         </div>
      <div className="imagen-titulo">
-        <h2> {product.Titulo} </h2>
-
-        <p> Color :{product.Colores} </p>
-        <p> Talles :{product.Talles}  </p>
-        <p> Precio: {product.Precio} </p>
-       
+        <h3> {product.titulo} </h3>
+        
+        <p> Talles :{product.talles}  </p>
+        <p> Precio: {product.precio} </p>
         {
             Cart
                 ? <Link to='/cart' > <button className="btn btn-dark" > Ver detalle de la compra</button>  </Link>

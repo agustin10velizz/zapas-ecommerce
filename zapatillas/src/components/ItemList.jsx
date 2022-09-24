@@ -8,7 +8,11 @@ const ItemList = ( {products}) => {
         {products.map ( (product) => <Zapatillas key={product.id} product={product} /> )}
 
         </div>
+
+        
     )
+    
 }
+
 
 export default ItemList
