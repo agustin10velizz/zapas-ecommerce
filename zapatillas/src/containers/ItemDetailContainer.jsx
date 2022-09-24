@@ -10,9 +10,11 @@ const ItemDetailContainer = () => {
     const { id } = useParams();
 
         useEffect(() => {
+            setLoading (true);
             customFetch(2000, Productos.find(products => products.id == id))
             .then (result => setDato (result))
             .catch (err => console.log (err))
+            .finally(() => setLoading(false))
         }, [])
    
     return(

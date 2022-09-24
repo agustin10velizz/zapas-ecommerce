@@ -3,14 +3,22 @@ import { CartContext } from "./CartContext";
 
 const Cart =() => {
   
-  const {cartList, clear,} = useContext (CartContext);
+  const {cartList, clear,removeItem} = useContext (CartContext);
 
     return (
         <>
-        <h1>Carrito</h1>
-        <button onClick={clear} >Borrar todas las compras</button>
+        <h1 className="carritoo">Carrito</h1>
+        <button onClick={clear} className='btn btn-primary' >Borrar todas las compras</button>
         {
-            cartList.map (products => <li> {products.titulo}  <img src={products.imagen} alt="" width="200" height="154" className="zapas" ></img> </li> )
+            cartList.map (products => <li> <h3>{products.titulo}</h3>  
+           
+            <p> Talles :{products.talles}  </p>   
+            <p> Precio: {products.precio} </p> 
+            
+            <img src={products.imagen} alt="" width="200" height="154" className="zapas" ></img> 
+            <button onClick={() => removeItem(products.id) } className='btn btn-secondary' > Borrar compra</button>
+            </li>
+             )
         }
         </>
     )

@@ -14,6 +14,7 @@ const Zapatillas =({product}) =>{
     const onAdd = (cantidad) =>{
         setCart (true); 
        addItem (product,cantidad)
+       
     }
       
 
@@ -31,6 +32,9 @@ const Zapatillas =({product}) =>{
         
         <p> Talles :{product.talles}  </p>
         <p> Precio: {product.precio} </p>
+
+        <Link to={"/category/" + product.categoryId} className="btn btn-info">Ver mas productos</Link>
+
         {
             Cart
                 ? <Link to='/cart' > <button className="btn btn-dark" > Ver detalle de la compra</button>  </Link>
