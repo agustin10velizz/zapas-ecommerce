@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import ItemList from "../components/ItemList";
 import customFetch from "../utils/customFetch"
 import Productos from "../utils/Productos";
-
+import Loader from "../components/Loader";
 const  Zapass = () =>{
     const [data, setData] = useState([]);
     const [loading , setLoading] = useState (false)
@@ -29,7 +29,7 @@ const  Zapass = () =>{
     return(
     
         <div className="listContainer">
-        {loading ? <h2> Cargando..</h2>  : <ItemList products={data}/>   }
+        {loading ? <Loader/>  : <ItemList products={data}/>   }
         </div>
       
     );

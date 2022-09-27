@@ -1,19 +1,26 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Carro from "./Carro"
+import { CartContext } from "./CartContext";
+import { useContext } from "react";
+
 
 
 const ItemDetail =({dato}) =>{
 
     const[Cart, setCart] = useState (false);
-    
+    const {addItem,  } = useContext (CartContext);
+
     const onAdd = (cantidad) =>{
-        setCart (true);   
+        console.log(`agregaste ${dato.titulo}, cantidad: ${cantidad}.`)
+        addItem (dato ,cantidad,)
+        setCart(true)
     }
-      
+    
+ 
 
     return(
-        <>
+     
     
     <div className="promo-container">
      
@@ -27,15 +34,16 @@ const ItemDetail =({dato}) =>{
         <p> Color :{dato.color} </p>
         <p> Talles :{dato.talles}  </p>
         <p> Precio: {dato.precio} </p>
-        {
-            Cart
-                ? <Link to='/cart' > <button className="btn btn-dark" > Ver detalle de la compra</button>  </Link>
-                : <Carro initial={0} stock={10} onAdd={onAdd}/>
+
+      
+
+        { Cart  ? <Link to='/cart' > <button className="btn btn-dark" > Ver detalle de la compra</button>  </Link>
+                : <Carro initial={0} stock={10} onAdd={onAdd}  /> 
         }
        
             </div>
         </div>
-        </>
+       
     )
 }
 

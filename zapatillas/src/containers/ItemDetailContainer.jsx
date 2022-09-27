@@ -2,12 +2,16 @@ import ItemDetail from '../components/ItemDetail'
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import customFetch from '../utils/customFetch';
-import Productos
- from '../utils/Productos';
+import Productos from '../utils/Productos';
+import Loader from "../components/Loader";
+
+
+
 const ItemDetailContainer = () => {
-    const [dato , setDato] = useState ({});
+    const [dato , setDato, ] = useState ({});
     const [loading , setLoading] = useState (false)
     const { id } = useParams();
+  
 
         useEffect(() => {
             setLoading (true);
@@ -17,9 +21,11 @@ const ItemDetailContainer = () => {
             .finally(() => setLoading(false))
         }, [])
    
+
+
     return(
         <div >
-        {loading ? <h2>Cargando..</h2> : <ItemDetail dato={dato} /> }
+        {loading ? <Loader/> : <ItemDetail  dato={dato} /> }
         </div>
     );
 }

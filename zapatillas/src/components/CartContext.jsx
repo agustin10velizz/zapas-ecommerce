@@ -6,25 +6,40 @@ const CartContextProvider = ({children}) => {
     const [cartList, setCartList] = useState([]);
 
     
-    const addItem = (product, cantidad) => {
-        setCartList([...cartList, product, cantidad])
+    const addItem = (dato, cantidad) => {
+       if (isInCart(dato.id)){
+        const indexItem = cartList.findIndex (ele => ele.dato.id === dato.id );
+        cartList[indexItem].cantidad = cartList[indexItem].cantidad + cantidad;
+        setCartList([...cartList])
+       } else {
+        setCartList([...cartList,  dato, cantidad ])
+       }
+        
     }
 
 
     const isInCart = (id) => {
-      return  cartList.find (product => product.id === id) ? true : false;}
+      return  cartList.some (product => product.id === id) ? true : false;}
     
     const removeItem = (id) => {
     const updateCart = cartList.filter (product => product.id !==id);
         setCartList(updateCart)
     }
-
+ 
     const clear = () => {
         setCartList([])
     }
 
+    const totalDeProductos = () => {
+        return cartList.reduce ((acc, itemCart) => acc + itemCart.cantidad, 0)
+    }
+
+    
+
+
+
     return (
-        <CartContext.Provider value={{cartList, addItem, clear, isInCart, removeItem}}>
+        <CartContext.Provider value={{cartList, addItem, clear, isInCart, removeItem, totalDeProductos, }}>
             {children}
         </CartContext.Provider>
     )

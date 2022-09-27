@@ -44,7 +44,6 @@ body{
 
 
 .imagen-container{
-  display: flex;
   justify-content: center;
   gap: 2rem;
   margin: 60px;
@@ -53,7 +52,7 @@ body{
   border-radius: 15px;
   padding: 10px;
   margin-top: 20px;
-  margin-right: 155px;
+  margin-right: 125px;
   
 }
 
@@ -117,4 +116,13 @@ border: 10px black;
 .carrito{
   text-align: center;
   align-items: center;
+}
+
+.boton-detalle{
+  margin-left: 20px;
+}
+
+.loading{
+  text-align: center;
+  margin-top: 250px;
 }
