@@ -20,8 +20,7 @@ const Zapatillas =({product}) =>{
      <div className="imagen-titulo">
         <h4> {product.titulo} </h4>
         
-        <p> Talles :{product.talles}  </p>
-        <p> Precio: {product.precio} </p>
+        
 
         <Link to={"/item/" + product.id} className="boton-detalle  btn btn-dark">Ver mas </Link>
 

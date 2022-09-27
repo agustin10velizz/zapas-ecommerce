@@ -1,16 +1,14 @@
 import { BsCart3 } from "react-icons/bs";
-import React from "react";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { CartContext } from "./CartContext";
 
 const CartWidget = () => {
 
-   const {totalDeProductos} = useContext(CartContext)
-
+   const {totalProductos} = useContext(CartContext)
 
    return(
       <>
-    {(totalDeProductos() != 0) && <span>< BsCart3  className="carrito">{totalDeProductos()}</BsCart3></span>}
+    <span>< BsCart3  className="carrito"></BsCart3> {totalProductos()} </span>
     </>
    )
 }

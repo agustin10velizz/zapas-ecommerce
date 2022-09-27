@@ -113,7 +113,7 @@ border: 10px black;
   margin-left: 15px;
 }
 
-.carrito{
+.carritoo{
   text-align: center;
   align-items: center;
 }
@@ -125,4 +125,14 @@ border: 10px black;
 .loading{
   text-align: center;
   margin-top: 250px;
+}
+
+.cart{
+  margin-left: 15px;
+  display: inline-grid;
+
+}
+
+.boton-compra{
+  margin-top: 15px;
 }
