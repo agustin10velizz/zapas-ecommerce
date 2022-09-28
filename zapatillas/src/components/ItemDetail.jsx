@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Carro from "./Carro"
+import ItemCount from "./ItemCount"
 import { CartContext } from "./CartContext";
 import { useContext } from "react";
 
@@ -33,10 +33,10 @@ const ItemDetail =({dato}) =>{
 
         <p> Color :{dato.color} </p>
         <p> Talles :{dato.talles}  </p>
-        <p> Precio: {dato.precio} </p>
+        <p> Precio: ${dato.precio} </p>
 
         { Cart  ? <Link to='/cart' > <button className="btn btn-dark" > Ver el carrito</button>  </Link>
-                : <Carro initial={0} stock={10} onAdd={onAdd}  /> 
+                : <ItemCount initial={0} stock={10} onAdd={onAdd}  /> 
         }
        
             </div>

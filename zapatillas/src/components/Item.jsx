@@ -1,13 +1,11 @@
 
 import { Link } from "react-router-dom";
+import React from "react";
 
 
-
-const Zapatillas =({product}) =>{
+const Item =({product}) =>{
 
    
-      
-
     return(
         <>
     
@@ -20,12 +18,8 @@ const Zapatillas =({product}) =>{
      <div className="imagen-titulo">
         <h4> {product.titulo} </h4>
         
-        
-
         <Link to={"/item/" + product.id} className="boton-detalle  btn btn-dark">Ver mas </Link>
-
-       
-       
+  
             </div>
         </div>
         </>
@@ -33,4 +27,4 @@ const Zapatillas =({product}) =>{
 
 }
 
-export default Zapatillas;
+export default Item;

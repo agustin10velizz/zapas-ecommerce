@@ -8,7 +8,7 @@ const CartWidget = () => {
 
    return(
       <>
-    <span>< BsCart3  className="carrito"></BsCart3> {totalProductos()} </span>
+     <span>< BsCart3  className="carrito"></BsCart3> {totalProductos()} </span>
     </>
    )
 }

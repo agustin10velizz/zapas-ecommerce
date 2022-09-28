@@ -18,6 +18,7 @@ const  Zapass = () =>{
             .catch (err => console.log (err))
             .finally (() => setLoading(false))
         } else { 
+            setLoading (true);
             customFetch(2000, Productos)
             .then (result => setData (result))
             .catch (err => console.log (err))
