@@ -3,7 +3,7 @@ const Productos = [
         id: 1,
         titulo:"Vans Negro",
          color: "Negro",
-          talles:"39, 40, 41",
+          talles:"talles",
            precio: 2500,
             imagen: "https://media.revistagq.com/photos/5fc60d39be088082688e9834/master/w_1600%2Cc_limit/1973657270-01-01.jpg",
              categoryId: 1,
