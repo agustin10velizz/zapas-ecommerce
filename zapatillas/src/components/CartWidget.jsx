@@ -4,11 +4,12 @@ import { CartContext } from "./CartContext";
 
 const CartWidget = () => {
 
-   const {totalProductos} = useContext(CartContext)
+   const { totalProductos} = useContext(CartContext)
 
    return(
       <>
-     <span>< BsCart3  className="carrito"></BsCart3> {totalProductos()} </span>
+      {(totalProductos() != 0) &&<span>< BsCart3 className="carrito"></BsCart3> {totalProductos()} </span>}
+      
     </>
    )
 }

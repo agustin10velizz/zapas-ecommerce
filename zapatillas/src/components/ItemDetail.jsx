@@ -8,7 +8,7 @@ import { useContext } from "react";
 
 const ItemDetail =({dato}) =>{
 
-    const[Cart, setCart] = useState (false);
+    const[Cart, setCart] = useState (0);
     const {addItem,  } = useContext (CartContext);
 
     const onAdd = (cantidad) =>{

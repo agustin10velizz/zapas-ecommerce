@@ -3,7 +3,7 @@ const Productos = [
         id: 1,
         titulo:"Vans Negro",
          color: "Negro",
-          talles:"talles",
+          talles:"39, 40, 41",
            precio: 2500,
             imagen: "https://media.revistagq.com/photos/5fc60d39be088082688e9834/master/w_1600%2Cc_limit/1973657270-01-01.jpg",
              categoryId: 1,
@@ -29,7 +29,7 @@ const Productos = [
 
         },
     {
-        id:4,
+        id:4,     
         titulo:"Vans Rojo",
          color: "Rojo",
           talles:"39, 40, 41",
@@ -39,7 +39,7 @@ const Productos = [
 
         },
     {
-        id:5,
+        id:5,   
         titulo:"Converse Negro",
          color: "Negro",
           talles:"39, 40, 41",
@@ -49,7 +49,7 @@ const Productos = [
 
         },
     {
-        id:6,
+        id:6, 
         Titulo:"Adidas Negro",
          color: "Negro",
           talles:"39, 40, 41",
@@ -59,7 +59,7 @@ const Productos = [
 
         },
         {
-            id: 7,
+            id: 7,   
             titulo:"Vans Azul",
              color: "Azul",
               talles:"39, 40, 41",
@@ -68,7 +68,7 @@ const Productos = [
                  categoryId: 1, 
         },
         {
-            id:8,
+            id:8,     
              titulo:"Converse Marrones",
               color: "Marrones",
                talles:"39, 40, 41",
@@ -77,7 +77,7 @@ const Productos = [
                     categoryId: 2, 
         },
         {
-            id:9,
+            id:9,      
              titulo:"Adidas Verde",
                color: "Verde",
                 talles:"39, 40, 41",

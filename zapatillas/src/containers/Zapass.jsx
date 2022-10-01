@@ -1,30 +1,39 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../components/ItemList";
-import customFetch from "../utils/customFetch"
-import Productos from "../utils/Productos";
 import Loader from "../components/Loader";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from '../utils/fireBase';
+
+
+
+
 const  Zapass = () =>{
     const [data, setData] = useState([]);
-    const [loading , setLoading] = useState (false)
+    const [loading ,setLoading ] = useState (false)
    const {id} = useParams();
 
     
-    useEffect ( () =>{
-        setLoading (true);
-        if (id){
-            customFetch(2000, Productos.filter (products => products.categoryId == id ))
-            .then (result => setData (result))
-            .catch (err => console.log (err))
-            .finally (() => setLoading(false))
-        } else { 
-            setLoading (true);
-            customFetch(2000, Productos)
-            .then (result => setData (result))
-            .catch (err => console.log (err))
-            .finally (() => setLoading(false))
+   useEffect(() => {
+    setLoading(true)
+    const firestoreFetch = async () => {
+        let q
+        if (id) {
+            q = query(collection(db, "products"), where('categoryId', '==', parseInt(id)))
+        } else {
+            q = query(collection(db, "products"))
         }
-    }, [id])
+        const querySnapshot = await getDocs(q);
+        const dataFromFirestore = querySnapshot.docs.map(document => ({
+            id: document.id,
+            ...document.data()
+        }))
+        setLoading(false)
+        return dataFromFirestore
+    }
+    firestoreFetch()
+        .then(result => setData(result))
+}, [id]);
   
 
     return(
