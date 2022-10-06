@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import Zapass from './containers/Zapass';
+import ItemListContainer from './containers/ItemListContainer';
 import Cart from './components/Cart'
 import React from 'react';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
@@ -15,13 +15,14 @@ const App = () =>{
     <Navbar/>
     <Routes>
 
-    <Route path='/' element= {  <Zapass/>} />
-    <Route path='/Category/:id' element= {  <Zapass/>} />
+    <Route path='/' element= {  <ItemListContainer/>} />
+    <Route path='/Category/:id' element= {  <ItemListContainer/>} />
     <Route path='/item/:id' element= {  <ItemDetailContainer/>} />
     <Route path='/cart' element= {  <Cart/>} />
     
      </Routes>
      </BrowserRouter>
+     
      </CartContextProvider >
   );
 }

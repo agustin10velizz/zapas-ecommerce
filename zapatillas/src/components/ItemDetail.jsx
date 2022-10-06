@@ -26,17 +26,17 @@ const ItemDetail =({dato}) =>{
      
      <div className="promo-zapas">
     
-     <img src={dato.imagen} alt="" width="200" height="154" className="promos" ></img>
+     <img src={dato.imagen} alt="" width="400" height="354" className="promos" ></img>
         </div>
-     <div className="imagen-titulo">
+     <div className="imagen-titulo-zapas">
         <h2> {dato.titulo} </h2>
-
-        <p> Color :{dato.color} </p>
         <p> Talles :{dato.talles}  </p>
-        <p> Precio: ${dato.precio} </p>
+        <p> Precio: <b> ${dato.precio}</b> </p>
 
-        { Cart  ? <Link to='/cart' > <button className="btn btn-dark" > Ver el carrito</button>  </Link>
-                : <ItemCount initial={0} stock={10} onAdd={onAdd}  /> 
+        { 
+            Cart === 0
+            ? <ItemCount initial={1} stock={10} onAdd={onAdd}  />
+            : <Link to='/cart' > <button className="btn btn-dark" > Ver el carrito</button>  </Link>
         }
        
             </div>

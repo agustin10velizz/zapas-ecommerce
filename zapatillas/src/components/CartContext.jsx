@@ -3,14 +3,14 @@ import { createContext, useState } from "react";
 export const CartContext = createContext ();
 
 const CartContextProvider = ({children}) => {
+    
     const [cartList, setCartList] = useState([]);
 
     
     const addItem = (dato, cantidad) => {
        if (isInCart(dato.id)){
-        const indexItem = cartList.findIndex (element => element.dato.id === dato.id );
+        const indexItem = cartList.findIndex (ele => ele.product.id === dato.id );
         cartList[indexItem].cantidad = cartList[indexItem].cantidad + cantidad;
-        setCartList([...cartList])
        } else {
         setCartList([...cartList,  dato, cantidad ])
        }

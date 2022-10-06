@@ -69,6 +69,13 @@ border: 10px black;
     margin-top: 5px;
 }
 
+.imagen-titulo-zapas{
+  
+  text-align: center;
+  color: white;
+  margin-top: 5px;
+}
+
 .boton{
   margin-top: 10px;
   margin-left: 18px;
@@ -128,11 +135,23 @@ border: 10px black;
 }
 
 .cart{
-  margin-left: 15px;
+  margin-left: 45px;
+  margin-top: 25px;
   display: inline-grid;
-
+  background-color: rgb(236, 75, 75);
+  border-radius: 15px;
+  padding: 10px;
+  color: aliceblue;
+   justify-items: center;
 }
 
 .boton-compra{
   margin-top: 15px;
+  font-size: 15px;
+}
+
+.boton-borrar{
+  display: flex;
+  align-content: stretch;
+  justify-content: space-evenly;
 }
