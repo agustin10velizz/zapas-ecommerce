@@ -12,10 +12,10 @@ const Cart =() => {
 
   const createOrder = async() => {
 
-    let dataDb = cartList.map(dato => ({
-      id: dato.id,
-      precio: dato.precio,
-      titulo: dato.titulo
+    let dataDb = cartList.map(producto => ({
+      id: producto.id,
+      precio: producto.precio,
+      titulo: producto.titulo
     }))
 
 
@@ -54,10 +54,10 @@ const Cart =() => {
             <button onClick={createOrder} className='boton-borrar btn btn-dark' >Finalizar compra</button>
             </div>
 
-        {cartList.map ((produc) => <CartItem key={produc.id} produc={produc}/>)}
-        <div className="total">
-        <p> Total: {totalDeProductosPrecio()}  </p>
-          </div>
+        {cartList.map ((item) => <CartItem key={item.id} produc={item}/>)}
+      
+        <p className="total"> Total: ${totalDeProductosPrecio()}  </p>
+          
         </div>
         
     )

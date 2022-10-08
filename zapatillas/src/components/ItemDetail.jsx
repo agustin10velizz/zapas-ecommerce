@@ -6,14 +6,14 @@ import { useContext } from "react";
 
 
 
-const ItemDetail =({dato}) =>{
+const ItemDetail =({item}) =>{
 
     const[Cart, setCart] = useState (0);
     const {addItem,  } = useContext (CartContext);
 
     const onAdd = (cantidad) =>{
-        console.log(`agregaste ${dato.titulo}, cantidad: ${cantidad}.`)
-        addItem (dato ,cantidad,)
+        console.log(`agregaste ${item.titulo}, cantidad: ${cantidad}.`)
+        addItem (item ,cantidad,)
         setCart(true)
     }
     
@@ -26,12 +26,12 @@ const ItemDetail =({dato}) =>{
      
      <div className="promo-zapas">
     
-     <img src={dato.imagen} alt="" width="400" height="354" className="promos" ></img>
+     <img src={item.imagen} alt="" width="400" height="354" className="promos" ></img>
         </div>
      <div className="imagen-titulo-zapas">
-        <h2> {dato.titulo} </h2>
-        <p> Talles :{dato.talles}  </p>
-        <p> Precio: <b> ${dato.precio}</b> </p>
+        <h2> {item.titulo} </h2>
+        <p> Talles :{item.talles}  </p>
+        <p> Precio: <b> ${item.precio}</b> </p>
 
         { 
             Cart === 0

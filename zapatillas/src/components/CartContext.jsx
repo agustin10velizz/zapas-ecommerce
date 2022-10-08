@@ -7,19 +7,21 @@ const CartContextProvider = ({children}) => {
     const [cartList, setCartList] = useState([]);
 
     
-    const addItem = (dato, cantidad) => {
-       if (isInCart(dato.id)){
-        const indexItem = cartList.findIndex (ele => ele.product.id === dato.id );
-        cartList[indexItem].cantidad = cartList[indexItem].cantidad + cantidad;
-       } else {
-        setCartList([...cartList,  dato, cantidad ])
-       }
-        
+    const addItem = (item, cantidad) => {
+        if(isInCart(item.id)) {
+            setCartList(cartList.map(product => {
+                return product.id === item.id ? {
+                    ...product, cantidad : product.cantidad + cantidad}  : item
+            
+            }))
+           } else {
+                setCartList([...cartList, {...item, cantidad}])
+           }
     }
 
 
     const isInCart = (id) => {
-      return  cartList.some (product => product.id === id) ? true : false;}
+      return  cartList.some (item => item.id === id) ? true : false;}
     
     const removeItem = (id) => {
     const updateCart = cartList.filter (element => element.id !==id);

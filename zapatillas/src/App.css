@@ -33,9 +33,17 @@ body{
 
 
 .carrito{
-  color: white;
-  font-size: 50px;
+  color: rgb(0, 0, 0);
+  font-size: 35px;
   margin-right: 35px;
+  display: flex;
+  background-color: rgb(219, 193, 137);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.icono{
+  margin-top: 10px;
 }
 
 .img-logo{
@@ -72,7 +80,7 @@ border: 10px black;
 .imagen-titulo-zapas{
   
   text-align: center;
-  color: white;
+  color: rgb(0, 0, 0);
   margin-top: 5px;
 }
 
@@ -97,7 +105,7 @@ border: 10px black;
   border-radius: 15px;
   padding: 10px;
   margin-left: 450px;
-
+  
 }
 
 .promos{
@@ -123,6 +131,7 @@ border: 10px black;
 .carritoo{
   text-align: center;
   align-items: center;
+  font-family:'Times New Roman', Times, serif
 }
 
 .boton-detalle{
@@ -136,7 +145,7 @@ border: 10px black;
 
 .cart{
   margin-left: 45px;
-  margin-top: 25px;
+  margin-top: 15px;
   display: inline-grid;
   background-color: rgb(236, 75, 75);
   border-radius: 15px;
@@ -154,4 +163,13 @@ border: 10px black;
   display: flex;
   align-content: stretch;
   justify-content: space-evenly;
+}
+
+.total{
+ margin-top: 10px;
+ padding-left: 650px;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  background-color: antiquewhite;
+  
 }

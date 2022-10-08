@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 
 
-const Item =({product}) =>{
+const Item =({producto}) =>{
 
    
     return(
@@ -13,12 +13,12 @@ const Item =({product}) =>{
      
      <div className="imagen-zapas">
     
-     <img src={product.imagen} alt="" width="200" height="154" className="zapas" ></img>
+     <img src={producto.imagen} alt="" width="200" height="154" className="zapas" ></img>
         </div>
      <div className="imagen-titulo">
-        <h4> {product.titulo} </h4>
+        <h4> {producto.titulo} </h4>
         
-        <Link to={"/item/" + product.id} className="boton-detalle  btn btn-dark">Ver mas </Link>
+        <Link to={"/item/" + producto.id} className="boton-detalle  btn btn-dark">Ver mas </Link>
   
             </div>
         </div>

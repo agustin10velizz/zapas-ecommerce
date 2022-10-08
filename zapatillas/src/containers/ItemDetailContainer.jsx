@@ -7,7 +7,7 @@ import { db } from '../utils/fireBase';
 
 
 const ItemDetailContainer = () => {
-    const [dato , setDato, ] = useState ({});
+    const [datos , setDatos, ] = useState ({});
     const [loading ,setLoading ] = useState (false)
     const { id } = useParams();
   
@@ -20,7 +20,7 @@ const ItemDetailContainer = () => {
                 id: docSnap.id,
                 ...docSnap.data()
             })
-            setDato(itemFirestore)
+            setDatos(itemFirestore)
             setLoading(false)
         }
         docFetch()
@@ -30,7 +30,7 @@ const ItemDetailContainer = () => {
 
     return(
         <div >
-        {loading ? <Loader/> : <ItemDetail  dato={dato} /> }
+        {loading ? <Loader/> : <ItemDetail  item={datos} /> }
         </div>
     );
 }
