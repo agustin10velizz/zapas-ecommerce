@@ -15,7 +15,8 @@ const Cart =() => {
     let dataDb = cartList.map(producto => ({
       id: producto.id,
       precio: producto.precio,
-      titulo: producto.titulo
+      titulo: producto.titulo,
+      cantidad: producto.cantidad
     }))
 
 
@@ -34,10 +35,10 @@ const Cart =() => {
     const newOrderRef = doc(collection(db,"orders"))
     await setDoc (newOrderRef, order);
     
-    cartList.forEach(async (dato)=> {
-      const itemRef = doc(db,"products", dato.id)
+    cartList.forEach(async (producto)=> {
+      const itemRef = doc(db,"products", producto.id)
       await updateDoc(itemRef,{
-        stock: increment(-dato.cantidad)
+        stock: increment(-producto.cantidad)
       })
     })
     clear()
