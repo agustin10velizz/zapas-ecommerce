@@ -4,12 +4,10 @@ import ItemCount from "./ItemCount"
 import { CartContext } from "./CartContext";
 import { useContext } from "react";
 
-
-
 const ItemDetail =({item}) =>{
 
     const[Cart, setCart] = useState (0);
-    const {addItem,  } = useContext (CartContext);
+    const {addItem} = useContext (CartContext);
 
     const onAdd = (cantidad) =>{
         console.log(`agregaste ${item.titulo}, cantidad: ${cantidad}.`)

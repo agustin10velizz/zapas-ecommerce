@@ -5,9 +5,6 @@ import Loader from "../components/Loader";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from '../utils/fireBase';
 
-
-
-
 const  Zapass = () =>{
     const [data, setData] = useState([]);
     const [loading ,setLoading ] = useState (false)

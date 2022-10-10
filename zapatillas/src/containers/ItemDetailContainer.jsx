@@ -26,8 +26,6 @@ const ItemDetailContainer = () => {
         docFetch()
     }, [id]);
 
-
-
     return(
         <div >
         {loading ? <Loader/> : <ItemDetail  item={datos} /> }
